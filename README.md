@@ -12,9 +12,14 @@ A lightweight learning layer called **Raindrop** continuously adapts system beha
 
 ## Architecture Overview
 
-Event Stream → Cerebras Inference → Immediate Action
+Event Stream → Cerebras Inference → 
+
+Immediate Action 
+
 ↑
+
 Raindrop
+
 (Adaptive Learning)
 
 ---
