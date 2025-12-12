@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Project Surge — Ultra-Low Latency AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0b0e14;
+      color: #e6e6eb;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      padding: 2rem;
+      background: linear-gradient(135deg, #1f2937, #020617);
+      border-bottom: 1px solid #1f2937;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #38bdf8;
+    }
+    h2 {
+      color: #93c5fd;
+      margin-top: 2rem;
+    }
+    p {
+      max-width: 700px;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+    main {
+      padding: 2rem;
+    }
+    .box {
+      background: #020617;
+      border: 1px solid #1f2937;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1rem;
+      max-width: 700px;
+    }
+    .log {
+      font-family: monospace;
+      white-space: pre-line;
+      color: #a7f3d0;
+    }
+    footer {
+      padding: 1.5rem 2rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      border-top: 1px solid #1f2937;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>⚡ Project Surge</h1>
+  <p>Ultra-Low Latency AI for Real-Time Decision Making</p>
+</header>
+
+<main>
+
+  <h2>Overview</h2>
+  <p>
+    <strong>Project Surge</strong> is an event-driven AI inference engine designed for
+    applications where latency is the primary constraint.
+    It targets real-time use cases such as live automation,
+    instant recommendations, and streaming pattern detection.
+  </p>
+
+  <p>
+    Project Surge is architected for deployment on
+    <strong>Cerebras Inference</strong>, enabling sub-millisecond response times.
+    A lightweight learning layer called <strong>Raindrop</strong> continuously adapts
+    system behavior based on incoming events.
+  </p>
+
+  <h2>Live Demo (Simulated)</h2>
+  <p>
+    The output below simulates real-time, single-event inference behavior.
+    Events are processed immediately without batching.
+  </p>
+
+  <div class="box log" id="demoLog">
+    Initializing event stream…
+  </div>
+
+  <h2>Architecture</h2>
+  <div class="box">
+    <p>
+      Event Stream → Cerebras Inference → Immediate Action<br />
+      ↑<br />
+      Raindrop (Adaptive Learning)
+    </p>
+    <p>
+      <em>Latency target:</em> t &lt; 1 ms
+    </p>
+  </div>
+
+  <h2>Resources</h2>
+  <p>
+    <a href="https://github.com/YOUR_USERNAME/project-surge" target="_blank">
+      View GitHub Repository
+    </a>
+    <br />
+    <a href="#" target="_blank">
+      View Demo Slides
+    </a>
+  </p>
+
+  <p style="font-size:0.9rem; opacity:0.7;">
+    This demo illustrates system behavior and architecture.
+    Inference timing is simulated.
+    Cerebras is the target deployment platform.
+  </p>
+
+</main>
+
+<footer>
+  Built for the ⚡ Cerebras Ultra-Low Latency AI Track
+</footer>
+
+<script>
+  const log = document.getElementById("demoLog");
+
+  function simulateEvent() {
+    const t0 = (Math.random() * 10 + 10).toFixed(3);
+    const t1 = (parseFloat(t0) + Math.random() * 0.5).toFixed(3);
+
+    log.textContent =
+      `Event received at: ${t0} ms\n` +
+      `Inference completed at: ${t1} ms\n` +
+      `Action triggered immediately\n\n` +
+      log.textContent;
+  }
+
+  setInterval(simulateEvent, 1500);
+</script>
+
+</body>
+</html>
